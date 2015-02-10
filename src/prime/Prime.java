@@ -30,7 +30,7 @@ public class Prime {
 				if(n == 1) {
 					break; // num = 2^31-1(‘f”)‚Ìê‡A‚±‚ê‚ª‚È‚¢‚Æ–³ŒÀƒ‹[ƒv(2^31-1 < i ‚É‚È‚ç‚È‚¢‚½‚ß)
 				}
-			} else if(isToSqrt && Math.floor( Math.sqrt(n) ) <= i ) {
+			} else if(isToSqrt && n / i < i + 2) { // i(i+2) < (i+1)^2 ‚É’ˆÓ 
 				list.addFactor(n);
 				list.addDegree(1);
 				process.found(n, 1, true);
